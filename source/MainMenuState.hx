@@ -29,6 +29,7 @@ class MainMenuState extends MusicBeatState
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
+	var changeItem
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
 	
@@ -128,7 +129,6 @@ class MainMenuState extends MusicBeatState
 		}
 
 		FlxG.camera.follow(camFollowPos, null, 1);
-
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Twish Engine v" + TwishEngineversion, 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -261,7 +261,7 @@ class MainMenuState extends MusicBeatState
 					});
 				}
 			}
-                       if(FlxG.keys.anyJustPressed(debugKeys) #if android || _virtualpad.buttonE.justPressed #end)
+		    if (FlxG.keys.anyJustPressed(debugKeys) #if android || _virtualpad.buttonE.justPressed #end)
 			{
 				selectedSomethin = true;
 				MusicBeatState.switchState(new MasterEditorMenu());
@@ -302,6 +302,4 @@ class MainMenuState extends MusicBeatState
 			}
 		});
 	}
-    }
-}
 }
