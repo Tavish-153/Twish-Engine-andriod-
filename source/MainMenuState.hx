@@ -29,7 +29,7 @@ class MainMenuState extends MusicBeatState
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
-	var changeItem
+	var changeItem;
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
 	
