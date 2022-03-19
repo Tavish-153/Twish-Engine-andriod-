@@ -39,8 +39,8 @@ class MainMenuState extends MusicBeatState
 		#if ACHIEVEMENTS_ALLOWED 'awards', #end
 		'credits',
 		#if !switch 'donate', #end
-		'options'
-        'Youtube'
+		'options',
+                'Youtube'
 	];
 
 	var magenta:FlxSprite;
